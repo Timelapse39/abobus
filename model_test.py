@@ -22,7 +22,7 @@ def test_model_2():
     assert x == True
     
 def test_model_3():
-    prediction = Prediction.get_prediction('https://upload.wikimedia.org/wikipedia/ru/thumb/2/2f/Burj_Khalifa_building.jpg/220px-Burj_Khalifa_building.jpg')[0] 
+    prediction = Prediction.get_prediction('https://www.architime.ru/specarch/andrian_smith/3.jpg')[0] 
     x = False
     if 'building' in prediction['generated_text']:
       x = True
