@@ -41,3 +41,6 @@ streamlit run app.py
 * Колмыков Никита Сергеевич
 * Кроткий Григорий Никитич
 * Ягодников Алексей Вадимович
+
+## Работа приложения 
+![](https://github.com/Timelapse39/abobus/blob/main/model_example.gif.mp4)
