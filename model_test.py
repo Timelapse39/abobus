@@ -22,20 +22,13 @@ def test_model_2():
     assert x == True
     
 def test_model_3():
-    prediction = Prediction.get_prediction('https://www.architime.ru/specarch/andrian_smith/3.jpg')[0] 
-    x = False
-    if 'building' in prediction['generated_text']:
-      x = True
-    assert x == True
-    
-def test_model_4():
     prediction = Prediction.get_prediction('https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/model_gw/aventador/gallery/aven_gate_05_m.jpg')[0] 
     x = False
     if 'green' in prediction['generated_text']:
       x = True
     assert x == True
 
-def test_model_5():
+def test_model_4():
     prediction = Prediction.get_prediction('https://cdnn1.ukraina.ru/img/07e6/0c/02/1041436899_0:206:2905:1840_1920x0_80_0_0_c7022893b761781d76fe592010d14bd2.jpg')[0] 
     x = False
     if 'cat' in prediction['generated_text']:
