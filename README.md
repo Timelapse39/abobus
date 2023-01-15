@@ -43,4 +43,4 @@ streamlit run app.py
 * Ягодников Алексей Вадимович
 
 ## Работа приложения 
-![](https://github.com/Timelapse39/abobus/blob/main/model_example.gif.mp4)
+![](/model_example.gif)
