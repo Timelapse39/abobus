@@ -34,4 +34,4 @@ class PredictionGPT:
         set_seed(1337)
         generator("Here is a story about: " + text, max_length=300,
                   num_return_sequences=5)
-        return generator;
+        return generator

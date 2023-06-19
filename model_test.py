@@ -1,9 +1,10 @@
 from model import Prediction
 
 
-def test_model_notEmpty():
+def test_model_notempty():
     prediction = Prediction.get_prediction(
-        'https://cdnn21.img.ria.ru/images/07e5/09/1b/1751949030_0:115:3232'
+        'https://cdnn21.img.ria.ru/images/'
+        '07e5/09/1b/1751949030_0:115:3232'
         ':1933_1920x0_80_0_0_2a7e3e8f648bd91f65451264b93ef86f.jpg'
     )[0]
     x = False
@@ -14,7 +15,8 @@ def test_model_notEmpty():
 
 def test_model_1():
     prediction = Prediction.get_prediction(
-        'https://cdnn21.img.ria.ru/images/07e5/09/1b/1751949030_0:115:3232'
+        'https://cdnn21.img.ria.ru/images/'
+        '07e5/09/1b/1751949030_0:115:3232'
         ':1933_1920x0_80_0_0_2a7e3e8f648bd91f65451264b93ef86f.jpg'
     )[0]
     x = False
@@ -25,7 +27,8 @@ def test_model_1():
 
 def test_model_2():
     prediction = Prediction.get_prediction(
-        'https://media.cnn.com/api/v1/images/stellar/prod/221126143352-weston-mckennie.jpg?c=original.jpg'
+        'https://media.cnn.com/api/v1/images/stellar/'
+        'prod/221126143352-weston-mckennie.jpg?c=original.jpg'
     )[0]
     x = False
     if 'soccer' or 'ball' in prediction['generated_text']:
@@ -35,7 +38,8 @@ def test_model_2():
 
 def test_model_3():
     prediction = Prediction.get_prediction(
-        'https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/model_gw/aventador/gallery'
+        'https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini'
+        '/facelift_2019/model_gw/aventador/gallery'
         '/aven_gate_05_m.jpg'
     )[0]
     x = False
