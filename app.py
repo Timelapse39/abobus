@@ -26,6 +26,4 @@ if st.session_state.image:
     st.text_input('Ответ:',
                   value=answer_dict['generated_text'],
                   disabled=True)
-    st.text_input('История:',
-                  value=generated_stories['generated_text'],
-                  disabled=True)
+    st.write('История:', generated_stories['generated_text'])
