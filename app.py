@@ -28,4 +28,4 @@ if st.session_state.image:
                   disabled=True)
     st.text_input('История:',
                   value=generated_stories['generated_text'],
-                  disable=True)
+                  disabled=True)
