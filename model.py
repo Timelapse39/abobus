@@ -33,6 +33,7 @@ class PredictionGPT:
     def get_prediction(text: str):
         generator = pipeline('text-generation', model=MODELGPT)
         set_seed(1337)
-        generator("Here is a story about: " + text, max_length=300,
-                  num_return_sequences=5)
-        return generator
+        temp_var = generator("Here is a story about: " + text,
+                                max_length=300,
+                                num_return_sequences=5)
+        return temp_var
