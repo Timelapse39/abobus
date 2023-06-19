@@ -21,8 +21,8 @@ if st.session_state.image:
     answer_dict = (Prediction.get_prediction(image)[0])
     generated_stories = (
         PredictionGPT.get_prediction(
-            answer_dict['generated_text'][np.random.randint(0, 4)]
-        )
+            answer_dict['generated_text']
+        )[0]
     )
     st.text_input('Ответ:',
                   value=answer_dict['generated_text'],
