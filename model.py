@@ -1,7 +1,8 @@
 from functools import cache
+
 import streamlit as st
-from transformers import AutoTokenizer, pipeline, set_seed
 from PIL import Image
+from transformers import AutoTokenizer, pipeline, set_seed
 
 MODEL = "nlpconnect/vit-gpt2-image-captioning"
 MODELGPT = "gpt2"
@@ -19,7 +20,8 @@ class Prediction:
 
     @staticmethod
     def get_prediction(image: Image):
-        if not image: return
+        if not image:
+            return
         image_to_text = Prediction.get_model()
         temp_var = image_to_text(image)
         return temp_var

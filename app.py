@@ -1,8 +1,10 @@
+import numpy as np
 import streamlit as st
 from PIL import Image
-import numpy as np
-from model import Prediction, 
-                  PredictionGPT
+
+from model import Prediction,
+
+PredictionGPT
 
 file = st.file_uploader("Upload an image", key="image", type=["png", "jpg", "jpeg"])
 
@@ -22,9 +24,9 @@ if st.session_state.image:
             answer_dict['generated_text'][np.random.randint(0, 4)]
         )
     )
-    st.text_input('Ответ:', 
+    st.text_input('Ответ:',
                   value=answer_dict['generated_text'],
                   disabled=True)
-    st.text_input('История:', 
-                  value=generated_stories['generated_text'], 
+    st.text_input('История:',
+                  value=generated_stories['generated_text'],
                   disable=True)
