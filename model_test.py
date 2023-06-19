@@ -18,7 +18,7 @@ def test_model_1():
     if 'trees' or 'mountain' in prediction['generated_text']:
       x = True
     assert x == True
-    
+
 def test_model_2():
     prediction = Prediction.get_prediction(
         'https://media.cnn.com/api/v1/images/stellar/prod/221126143352-weston-mckennie.jpg?c=original.jpg'
@@ -27,7 +27,7 @@ def test_model_2():
     if 'soccer' or 'ball' in prediction['generated_text']:
       x = True
     assert x == True
-    
+
 def test_model_3():
     prediction = Prediction.get_prediction(
         'https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/model_gw/aventador/gallery/aven_gate_05_m.jpg'
