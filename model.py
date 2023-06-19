@@ -1,10 +1,10 @@
 from functools import cache
 import streamlit as st
-from transformers import AutoModelForQuestionAnswering, AutoTokenizer, pipeline
+from transformers import AutoModelForQuestionAnswering, AutoTokenizer, pipeline, set_seed
 from PIL import Image
 
 MODEL = "nlpconnect/vit-gpt2-image-captioning"
-
+MODELGPT = ""
 
 class Prediction:
     @staticmethod
@@ -21,3 +21,14 @@ class Prediction:
         image_to_text = Prediction.get_model()
         temp_var = image_to_text(image)
         return temp_var
+
+class PredictionGPT:
+      @staticmethod
+      def get_prediction(text: str):
+          generator = pipeline('text-generation', model="gpt2")
+          set_seed(1337)
+          generator("Here is a story about: " + text, max_length=300, num_return_sequences=5)
+          return generator;
+
+
+
