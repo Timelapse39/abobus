@@ -2,9 +2,7 @@ import numpy as np
 import streamlit as st
 from PIL import Image
 
-from model import Prediction,
-
-PredictionGPT
+from model import Prediction, PredictionGPT
 
 file = st.file_uploader("Upload an image", key="image", type=["png", "jpg", "jpeg"])
 
