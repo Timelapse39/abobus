@@ -1,6 +1,6 @@
 from functools import cache
 import streamlit as st
-from transformers AutoTokenizer, pipeline, set_seed
+from transformers import AutoTokenizer, pipeline, set_seed
 from PIL import Image
 
 MODEL = "nlpconnect/vit-gpt2-image-captioning"
